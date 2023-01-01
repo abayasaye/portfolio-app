@@ -1,11 +1,11 @@
-import "./SignInStyles.css"
+import "./SignInStyles.css";
 
-import{ useEffect, useState } from 'react'
-import axios from 'axios'
+import { useEffect, useState } from "react";
+import axios from "axios";
 const SignIn = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState()
+  const [user, setUser] = useState();
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem("user");
@@ -15,19 +15,16 @@ const SignIn = () => {
     }
   }, []);
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const user = { username, password };
     // send the username and password to the server
-    const response = await axios.post(
-      "http://localhost:3000",
-      user
-    );
+    const response = await axios.post("http://localhost:3000", user);
     // set the state of the user
-    setUser(response.data)
+    setUser(response.data);
     // store the user in localStorage
-    localStorage.setItem('user', response.data)
-    console.log(response.data)
+    localStorage.setItem("user", response.data);
+    console.log(response.data);
   };
   const handleLogout = () => {
     setUser({});
@@ -36,7 +33,7 @@ const SignIn = () => {
     localStorage.clear();
   };
 
-// if there's a user show the message below
+  // if there's a user show the message below
   if (user) {
     return <div>{user.name} is loggged in</div>;
   }
@@ -64,5 +61,5 @@ const SignIn = () => {
       <button onClick={handleLogout}>logout</button>
     </form>
   );
-}
-export default SignIn
+};
+export default SignIn;
