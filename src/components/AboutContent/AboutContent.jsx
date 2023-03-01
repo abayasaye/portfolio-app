@@ -3,8 +3,8 @@ import "./AboutContentStyles.css";
 import React from "react";
 import { Link } from "react-router-dom";
 
-import skillsImg from '../assets/skills.webp'
-import skillsImg2 from '../assets/skills2.webp'
+import skillsImg from '../../assets/skills.webp'
+import skillsImg2 from '../../assets/skills2.webp'
 const AboutContent = () => {
   return (
     <div className="about">

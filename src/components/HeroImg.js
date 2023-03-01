@@ -12,6 +12,7 @@ const HeroImg = () => {
       </div>
       <div className="content">
         <p>HI , I'M ABAYNEH ASAYE</p>
+        <img className="myimg" src={IntoImg} />
         <h1>A Full Stack Developer.</h1>
         <div>
             <Link to="/project" className="btn">PROJECTS</Link>
