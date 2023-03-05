@@ -18,7 +18,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #000;
+    background-color:#d0e8ff;
     opacity: 0.8;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .myimg{
-    width:100px;
-    height:100px;
+    width: 130px;
+    height:130px;
     border-radius: 50%;
 }

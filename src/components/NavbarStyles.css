@@ -10,7 +10,8 @@
 }
 
 .header-bg{
-    background-color: rgba(0, 0,0,0.85);
+    background-color:#d0e8ff;
+    /* background-color:#d9edff; */
     transition: 0.5s;
 }
 
